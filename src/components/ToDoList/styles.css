@@ -1,0 +1,66 @@
+body {
+    background-color: #f09ca2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 20px;
+    background-color: #f3f3e7;
+    height: 70vh;
+    width: 100%;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.toDo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.toDo p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 90px;
+    border: 2px solid #999da0;
+    background-color: white;
+    border-right: 0;
+    border-radius: 20px 0 0 20px;
+    padding: 0 5px 0 10px;
+}
+
+.toDo button {
+    height: 34px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #999da0;
+    background-color: #b2c4cb;
+    border-left: 0;
+    border-radius: 0 20px 20px 0;
+    padding: 2px 10px 2px 5px;
+}
+
+.toDo button:hover {
+    background-color: #999da0;
+    cursor: pointer;
+}

@@ -4,18 +4,16 @@ import Form from "./components/Form";
 import ToDoList from "./components/ToDoList";
 
 function App() {
-  const [userInput, setUserInput] = useState("");
-  const [toDos, setToDos] = useState([1]);
+  const [toDos, setToDos] = useState([]);
   const addToDo = (newToDo) => setToDos([...toDos, newToDo]);
-  const handleToDo = (item) => setToDos(toDos.map((each) => each !== item));
+  const handleToDo = (item) => setToDos(toDos.filter((each) => each !== item));
+
   return (
-    <div className="App">
-      <Form
-        addTodo={addToDo}
-        userInput={userInput}
-        setUserInput={setUserInput}
-      />
-      <ToDoList toDos={toDos} handleToDo={handleToDo} />
+    <div className="mainContainer">
+      <div className="containerBox">
+        <Form addToDo={addToDo} />
+        <ToDoList toDos={toDos} handleToDo={handleToDo} />
+      </div>
     </div>
   );
 }

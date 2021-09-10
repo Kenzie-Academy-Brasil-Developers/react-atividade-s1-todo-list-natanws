@@ -1,0 +1,26 @@
+.formBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.formBox input {
+    border-radius: 20px 0 0 20px;
+    border-color: #b2c4cb;
+    border-right: 0px;
+}
+
+.formBox button {
+    border-color: #f09ca2;
+    border-radius: 0 20px 20px 0;
+    border-left: 0;
+    color: white;
+    background-color: #f09ca2;
+}
+
+.formBox button:hover {
+    background-color: #946266;
+    border-color: #946266;
+    cursor: pointer;
+}

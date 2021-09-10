@@ -2,13 +2,14 @@ import "./styles.css";
 
 function ToDoList({ toDos, handleToDo }) {
   return (
-    <div>
-      <div>
-        {toDos.map((a) => (
-          <p>{a}</p>
-        ))}
-      </div>
-    </div>
+    <>
+      {toDos.map((currentToDo, index) => (
+        <div className="toDo">
+          <p key={index}>{currentToDo}</p>
+          <button onClick={() => handleToDo(currentToDo)}>x</button>
+        </div>
+      ))}
+    </>
   );
 }
 

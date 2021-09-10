@@ -1,15 +1,26 @@
 import "./styles.css";
+import { useState } from "react";
 
-function Form({ addToDo, userInput, setUserInput }) {
+function Form({ addToDo }) {
+  const [userInput, setUserInput] = useState("");
+
   return (
-    <div>
+    <div className="formBox">
       <form action="">
         <input
           type="text"
           value={userInput}
           onChange={(event) => setUserInput(event.target.value)}
         />
-        <button onClick={() => addToDo(userInput)}>Click me</button>
+        <button
+          onClick={(event) => {
+            event.preventDefault();
+            addToDo(userInput);
+            setUserInput("");
+          }}
+        >
+          Adicionar ToDo
+        </button>
       </form>
     </div>
   );
