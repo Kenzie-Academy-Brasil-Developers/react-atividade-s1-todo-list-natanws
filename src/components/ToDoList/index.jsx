@@ -1,9 +1,13 @@
 import "./styles.css";
 
-function ToDoList() {
+function ToDoList({ toDos, handleToDo }) {
   return (
     <div>
-      <p>save me</p>
+      <div>
+        {toDos.map((a) => (
+          <p>{a}</p>
+        ))}
+      </div>
     </div>
   );
 }
